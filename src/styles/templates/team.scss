@@ -1,0 +1,142 @@
+h1 {
+    color: $blue;
+    text-align: center;
+    margin: 0 0 $line * 2 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .user {
+        border: $line / 3 solid $blue;
+        background: fade-out($white, 0.1);
+        width: $line * 25;
+        margin: 0 0 $line * 4 $line * 4;
+        border-radius: $line;
+        text-align: center;
+        overflow: hidden;
+        
+        .image {
+            width: 100%;
+            text-align: center;
+            
+            img {
+                width: 100%;
+                border-bottom: $line / 3 solid $blue;
+            }
+        }
+        .head {
+            text-align: center;
+            font-size: $line * 1.8;
+        }
+        .contacts ul {
+            list-style: none;
+            margin: 0 0 $line * 2 0;
+            padding: 0;
+            
+            li {
+                &.vk,
+                &.fb,
+                &.tw {
+                    display: inline-block;
+                    width: $line * 5;
+                    height: $line * 5;
+                    background: {
+                        image: url('../../img/social-sprite.png');
+                        size: auto 100%;
+                        repeat: no-repeat;
+                    }
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &.vk {
+                    background-position: $line * -25 0;
+                }
+                &.tw {
+                    background-position: $line * -14.9 0;
+                }
+                &.skype,
+                &.mail,
+                &.tel {
+                    margin-top: $line;
+                    font: {
+                        weight: bold;
+                        size: $line * 1.6;
+                    }
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: $line * 5;
+                        height: $line * 5;
+                        background: {
+                            image: url('../../img/social-sprite.png');
+                            size: auto 100%;
+                            repeat: no-repeat;
+                        }
+                    }
+                    span {
+                        word-wrap: break-word;
+                    }
+                }
+                &.skype::before {
+                    background-position: $line * -10 0;
+                }
+                &.mail::before {
+                    background-position: $line * -20 0;
+                }
+                &.tel::before {
+                    background-position: $line * -4.9 0;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    border: $line / 3 solid $blue;
+    border-radius: $line;
+    background: fade-out($white, 0.1);
+    width: 60%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    
+    h2 {
+        margin: $line 0;
+    }
+    
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        border-top: $line / 3 solid $blue;
+        
+        li {
+            margin: 0;
+            padding: $line * 2;
+            font-weight: bold;
+            background: {
+                color: $lightblue;
+            }
+            color: $white;
+            transition: {
+                duration: $time;
+                timing-function: linear;
+            }
+            flex-grow: 1;
+            box-shadow: 0 0 0 $line / 5 $blue inset;
+            cursor: default;
+            
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+}

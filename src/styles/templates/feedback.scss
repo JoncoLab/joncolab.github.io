@@ -1,0 +1,113 @@
+.callcentr {
+    background-image: url(../img/callcentr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.feedback-form {
+    transform: scale(0);
+    
+    transition: {
+        duration: $time * 2;
+        timing-function: ease-in-out;
+        property: transform;
+    }
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+        
+    width: 30%;
+    min-width: $line * 40;
+        
+    margin: $line * 2 auto;
+    padding: $line * 2;
+        
+    background: {
+        color: fade-out($blue, 0.3);
+    }
+    font-weight: bold;
+    border: $line / 5 solid $blue;
+    border-radius: $line;
+        
+    h1 {
+        margin: 0;
+        text-align: center;
+        color: $black;
+    }
+    
+    #text,
+    #name,
+    #email,
+    label {
+        display: block;
+        padding: $line;
+    }
+    
+    #text,
+    #name,
+    #email {
+        background-color: $white;
+        border: none;
+        color: $blue;
+        font-weight: bold;
+        padding: $line;
+        border-radius: $line;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 $line / 5 $line / 10 $black;
+        }
+    }
+    
+    label {
+        margin-top: $line;
+    }
+    
+    #text {
+        resize: none;
+    }
+    
+    .buttons {
+        position: relative;
+        text-align: center;
+        width: auto;
+        border: none;
+        
+        padding: 0;
+        margin-top: $line * 2;
+            
+        #reset,
+        #submit {
+            width: 30%;
+            padding: $line;
+            margin: 0 $line * 2;
+            color: $blue;
+            
+            transition: {
+                duration: $time;
+                timing-function: linear;
+            }
+            
+            background: {
+                color: $black;
+            }
+            border: {
+                style: none;
+                radius: $line;
+            }
+        
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        
+            &:hover {
+                box-shadow: 0 0 $line 0 $lightblue inset;
+            }
+        }
+    }
+}

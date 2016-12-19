@@ -1,0 +1,33 @@
+<!doctype html>
+<html> 
+    //= !en/templates/head.html
+
+<body> 
+    //= !en/templates/header.html
+    <script>
+        var pageId = 1;
+    </script>
+    <main>
+        <div class="callcentr">
+            <script>
+                $(document).ready(function () {
+                    $('.feedback-form').css("transform", "none");
+                });
+            </script>
+            <form action="../scripts/php/mail.php" method="post" class="feedback-form">
+                <h1>Feedback</h1>
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" placeholder="Semen" required autofocus>
+                <label for="email">Your E-mail</label>
+                <input type="email" name="email" id="email" placeholder="example@joncolab.pro" required>
+                <label for="message">Your message</label>
+                <textarea rows="5" placeholder="Type your message" maxlength="1000" id="text" name="message" required></textarea>
+                <fieldset class="buttons">
+                    <input type="submit" id="submit" name="submit" value="Send">
+                    <input type="reset" id="reset" name="reset" value="Reset"> </fieldset>
+        </div>
+    </main> 
+        //= !en/templates/footer.html
+</body>
+
+</html>

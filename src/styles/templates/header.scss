@@ -1,0 +1,119 @@
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    padding: $line 22% $line 22%;
+    min-height: $line * 20;
+    
+    opacity: 0;
+    transition: {
+        duration: $time * 3;
+        timing-function: ease-in-out;
+        property: opacity;
+    }
+    
+    perspective: $line * 100;
+    
+    .menu {
+        @include cube($side: $line * 1.5);
+        list-style: none;
+        padding: 0;
+        
+        transition: {
+            duration: $time;
+            timing-function: ease-in-out;
+        }
+        
+        .menu-item {
+            color: $blue;
+            border-radius: $line / 5;
+            text-align: center;
+            
+            transition: {
+                duration: $time;
+                timing-function: linear;
+            }
+            
+            background: {
+                color: $white;
+            }
+            
+            img {
+                height: 80%;
+                margin-top: 10%;
+            }
+            
+            a {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: block;
+                top: 0;
+            }
+            
+            span {
+                opacity: 0;
+                position: absolute;
+                top: 105%;
+                left: 0;
+                width: 100%;
+                background: $blue;
+                color: #fff;
+                border-radius: $line;
+                transition: {
+                    duration: $time;
+                    property: opacity;
+                    timing-function: linear;
+                }
+            }
+            
+            box-shadow: 0 0 0 $line / 5 $blue;
+            
+            &:hover {
+                box-shadow: 0 0 0 $line / 2 $blue;
+                
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+        transition-duration: $time;
+        opacity: 0.8;
+        
+        &:first-of-type {
+            transform: rotate(-90deg);
+            
+            &:active {
+                transform: 
+                    rotate(-90deg)
+                    scale(1.1);
+            }
+        }
+        
+        &:hover {
+            opacity: 1;
+        }
+        
+        &:active {
+            transform: 
+                rotate(90deg)
+                scale(1.1);
+        }
+    
+        .pyramid {
+            @include pyramid($side: $line / 1.5);
+            animation: {
+                duration: $time * 10;
+                name: rotate;
+                iteration-count: infinite;
+                fill-mode: both;
+                timing-function: linear;
+            }
+        }
+    }
+}

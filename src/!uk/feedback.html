@@ -1,0 +1,33 @@
+<!doctype html>
+<html> 
+    //= !uk/templates/head.html
+<body>
+    <script>
+        var pageId = 1;
+    </script> 
+    //= !uk/templates/header.html
+    <main>
+        <div class="callcentr">
+            <script>
+                $(document).ready(function () {
+                    $('.feedback-form').css("transform", "none"); 
+                });
+            </script>
+            <form action="../scripts/php/mail.php" method="post" class="feedback-form">
+                <h1>Зворотній зв'язок</h1>
+                <label for="name">Ваше ім'я</label>
+                <input type="text" name="name" id="name" placeholder="Семен" required autofocus>
+                <label for="email">Ваша електронна адреса</label>
+                <input type="email" name="email" id="email" placeholder="zrazok@joncolab.pro" required>
+                <label for="message">Ваш коментар</label>
+                <textarea rows="5" placeholder="Введіть ваше повідомлення" maxlength="1000" id="text" name="message" required></textarea>
+                <fieldset class="buttons">
+                    <input type="submit" id="submit" name="submit" value="Надіслати">
+                    <input type="reset" id="reset" name="reset" value="Скинути"> </fieldset>
+            </form>
+        </div>
+    </main> 
+    //= !uk/templates/footer.html
+    </body>
+
+</html>

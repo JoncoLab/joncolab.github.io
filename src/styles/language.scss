@@ -1,0 +1,105 @@
+@import 'templates/variables.scss';
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: {
+        color: $blue;
+        image: url(../img/bg.png);
+        position: center;
+        size: contain;
+    }
+    font: {
+        family: Main, sans-serif;
+        weight: bold;
+        size: $line * 2.5;
+    }
+    color: $black;
+    text-align: center;
+}
+
+.logo {
+    display: inline-flex;
+    align-content: center;
+    width: $line * 80;
+    height: $line * 20;
+    margin: $line * 4 0 0 $line * -15;
+    
+    .text,
+    .planet {
+        height: inherit;
+    }
+    
+    .planet {
+        margin-right: $line * 2;
+        
+        @keyframes planet {
+            50% {
+                transform: 
+                    scale(0.5)
+                    rotate(180deg)
+                    translate($line * -15);
+            }
+            to {
+                transform: 
+                    rotate(360deg);
+            }
+        }
+        
+        animation: {
+            name: planet;
+            duration: $time * 20;
+            timing-function: linear;
+            fill-mode: both;
+            iteration-count: 1;
+        }
+    }
+}
+
+h1 {
+    color: $white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    
+    position: relative;
+    height: 10%;
+    width: 80%;
+    margin: $line * 2 10%;
+    
+    .language-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $blue;
+        flex-basis: 35%;
+        
+        transition: {
+            duration: $time;
+        }
+        background: {
+            color: fade-out($black, 0.2);
+        }
+        border: {
+            style: none;
+            radius: $line;
+        }
+        
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        
+        &:hover {
+//            box-shadow: 0 0 $line 0 $lightblue inset;
+            background-color: $black;
+        }
+    }
+}

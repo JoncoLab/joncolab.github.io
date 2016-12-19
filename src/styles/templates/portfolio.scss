@@ -1,0 +1,196 @@
+.portfolio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        clear: both;
+    }
+}
+
+.sites {
+    width: $line * 40;
+    margin: $line * 2 auto;
+    
+    transition: {
+        duration: $time;
+        timing-function: linear;
+    }
+    
+    h1 {
+        margin-top: 0;
+        color: $blue;
+        font: {
+            size: $line * 3;
+        }
+        text-align: center;
+    }
+    
+    ol {
+        position: relative;
+        padding: 0;
+        transition: {
+            duration: $time;
+        }
+        
+        li {
+            transition: {
+                duration: $time;
+                property: transform;
+                timing-function: ease-in;
+            }
+            &:nth-child(odd) {
+                transform: translateX(-200%);
+            }
+            
+            &:nth-child(even) {
+                transform: translateX(200%);
+            }
+            
+            border: {
+                top: $line / 5 solid $blue;
+                radius: $line;
+            }
+            
+            background-color: $white;
+            height: $line * 5;
+            
+            text-align: center;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            font-weight: bold;
+            position: relative;
+            
+            cursor: pointer;
+            
+            span {
+                flex-grow: 1;
+                text-align: right;
+                padding-right: $line;
+            }
+            
+            p {
+                display: none;
+                position: absolute;
+                bottom: -50%;
+                right: 105%;
+                width: 100%;
+                background-color: $blue;
+                color: $blue;
+                background: {
+                    color: fade-out($white, 0.1);
+                }
+                font-weight: bold;
+                border: $line / 5 solid $blue;
+                border-radius: $line;
+            }
+            
+            .arrow {
+                flex-basis: 0;
+                height: inherit;
+                background: $blue;
+                border: {
+                    top-right-radius: $line;
+                    bottom-right-radius: $line;
+                }
+                
+                transform: translateX($line / 10);
+                
+                transition: {
+                    duration: $time;
+                    timing-function: ease-in-out;
+                    transition-property: flex-basis;
+                }
+                
+                background: {
+                    image: url(../svg/next.svg);
+                    position: center;
+                    repeat: no-repeat;
+                    size: 60%;
+                }
+            }
+            
+            &:hover {
+                .arrow {
+	           flex-basis: $line * 5;    
+                }
+            }
+        }
+    }
+}
+
+.catalog {
+    width: 30%;
+    position: relative;
+    float: right;
+    
+    ol {
+        display: none;
+        margin-top: $line * 5;
+    
+        li {
+            display: block;
+        }
+    
+        p {
+            padding: $line;
+            
+            &::first-letter {
+                color: $blue;
+                margin-left: $line;
+            }
+        }
+    }
+    
+    .ui-accordion {
+        font-family: Jonco;
+        
+        &-header {
+            border-radius: $line;
+            background-color: $white;
+            transition: {
+                duration: $time;
+                timing-function: linear;
+            }
+            
+            &:focus {
+                outline: none;
+            }
+            
+            &:hover {
+                box-shadow: 0 0 0 $line / 5 $blue;
+            }
+            
+            &-collapsed {
+                
+            }
+            
+            &-active {
+                background-color: $blue;
+                outline: none;
+                border: none;
+            }
+        }
+        
+        &-content {
+            
+            &-active {
+                border-radius: $line;
+                background-color: fade-out($white, 0.1);
+                box-shadow: 0 0 0 $line / 5 $blue;
+                padding: $line * 2;
+                
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

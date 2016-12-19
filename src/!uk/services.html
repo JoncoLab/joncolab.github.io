@@ -1,0 +1,92 @@
+<!doctype html>
+<html> 
+    //= !uk/templates/head.html
+
+<body>
+    <script>
+        var pageId = 0;
+    </script> 
+    //= !uk/templates/header.html
+    <main>
+        <script>
+            $(document).ready(function () {
+                $('.logo').css({
+                    "transform": "none"
+                });
+                setTimeout(function () {
+                    $('.list').css({
+                        "transform": "none"
+                    })
+                }, 400);
+                setTimeout(function () {
+                    $('.main').css({
+                        "overflow": "visible"
+                    })
+                }, 800);
+            });
+        </script>
+        <div class="main">
+            <div class="list">
+                <h1>Список послуг, які надає наша команда</h1>
+                <ul>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Розробка дизайну</span>
+                        <ul class="details">
+                            <li>Індивідуальний дизайн замовлень.</li>
+                            <li>Розробка дизайну враховуючи ваші побажання.</li>
+                            <li>Ексклюзивні ідеї подачі інформації.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Верстка веб-сторінок</span>
+                        <div class="details">
+                            <p>Ми працюємо з сучасною кодовою версткою, яка гарантує замовнику коректну роботу проекту, гнучке редагування дизайну та контенту.</p>
+                            <p>Замовляючи продукт Ви отримуєте не тільки дизайн та візуальне задоволення, а й сам функціонал, так мовити кодове серце вашого проекту, архітектура та кодова частина якого відповідає світовим стандартам.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Динамічні елементи дизайну</span>
+                        <div class="details">
+                            <p>Інтерфейс сторінок буде не лише інтуітивно зрозумілий, а й оформлений візуально за допомогою додавання динамічних анімацій для об'єктів, враховуючи ваші побажання.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Робота з файлами на стороні сервера</span>
+                        <ul class="details">
+                            <li>Бази даних.</li>
+                            <li>Відправка та опрацювання замовлень.</li>
+                            <li>Реєстрація користувачів.</li>
+                            <li>Зв'язок з користувачем, тощо.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Робота з базами даних</span>
+                        <ul class="details">
+                            <li>Створення баз даних (дані зареєстрованих користувачів, каталоги, архіви, тощо).</li>
+                            <li>Налаштування гнучкості та простоти доступу для адміністрування.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Тривимірні анімації</span>
+                        <ul class="details">
+                            <li>Реалізація елементів сайту в тривимірному просторі. </li>
+                            <li>Розробка анімації як окремих блоків сторінок, так і всього проекту в 3D.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Адаптивна та кросбраузерна верстка</span>
+                        <ul class="details">
+                            <li>Адаптація проектів під ПК, планшетні комп'ютери та інші мобільні пристрої.</li>
+                            <li>Гарантія коректної роботи вашого замовлення у браузерах Google Chrome, Opera, Internet Explorer, Mozilla firefox, Safari.</li>
+                            <li>Кросс-браузерність для специфічних платформ у разі потреби замовника.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo"> <img alt="logo :(" src="../img/adaptive.png"> </div>
+        </div>
+    </main> 
+    //= !uk/templates/footer.html
+    </body>
+
+</html>
