@@ -1,0 +1,174 @@
+<!doctype html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <title>Jonco Lab</title>
+    <link href="../styles/main-style.css" rel="stylesheet">
+    <link href="../jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../jquery/jquery-ui.structure.css" rel="stylesheet">
+    <link href="../jquery/jquery-ui.theme.css" rel="stylesheet">
+    
+    <script src="../jquery/external/jquery/jquery.js"></script>
+    <script src="../scripts/js/js.cookie-2.1.3.min.js"></script>
+    <script src="../jquery/jquery-ui.js"></script>
+    <script src="../scripts/js/main-script.js"></script>
+</head>
+
+<body>
+    <script>
+        var pageId = 0;
+    </script> 
+    <header>
+        <script>
+            $(document).ready(function () {
+                $('header').css({
+                    "opacity": "1"
+                });
+            });
+        </script>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+        <ul class="menu cube">
+            <li class="side"></li>        
+            <li class="menu-item side">
+                <img src="../svg/portfolio.svg">
+                <a href="portfolio.html"></a>
+                <span>Catalog</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/feedback.svg">
+                <a href="feedback.html"></a>
+                <span>Feedback</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/team.svg">
+                <a href="team.html"></a>
+                <span>Our team</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/services.svg">
+                <a href="services.html"></a>
+                <span>Services</span>
+            </li>
+            <li class="side"></li>
+        </ul>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <script>
+            $(document).ready(function () {
+                $('.logo').css({
+                    "transform": "none"
+                });
+                setTimeout(function () {
+                    $('.list').css({
+                        "transform": "none"
+                    })
+                }, 400);
+                setTimeout(function () {
+                    $('.main').css({
+                        "overflow": "visible"
+                    })
+                }, 800);
+            });
+        </script>
+        <div class="main">
+            <div class="list">
+                <h1>The list of services our team provide:</h1>
+                <ul>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Design development</span>
+                        <ul class="details">
+                            <li>Unique design for your orders.</li>
+                            <li>Development of design in your mind according to your preferences.</li>
+                            <li>Exclusive ideas of presenting an information.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Coding web pages</span>
+                        <div class="details">
+                            <p>We work with a modern code, which guarantees correct work of the project, flexible design and content to the customer.</p>
+                            <p>By ordering the product you will get not only visually pleasant design but also the functional code, architecture of which meets international standards.</p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Dynamic design elements</span>
+                        <div class="details">
+                            <p>Pages' interface will be not only intuitively understandable, but designed visually by adding dynamic animations for objects. </p>
+                        </div>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Work with files on the server side</span>
+                        <ul class="details">
+                            <li>Databases.</li>
+                            <li>Sending and processing orders.</li>
+                            <li>Users registration.</li>
+                            <li>Feedback etc.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Work with databases</span>
+                        <ul class="details">
+                            <li>Creating databases (registered users data, catalogs, archives, etc.).</li>
+                            <li>Flexibility and ease access for administration setup.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>3D animations</span>
+                        <ul class="details">
+                            <li>Implementation of elements of the site for three-dimensional space.</li>
+                            <li>Development of animation for both separate elements on pages and the entire project in 3D.</li>
+                        </ul>
+                    </li>
+                    <li class="service">
+                        <div class="arrow"></div> <span>Adaptive and cross-browser coding</span>
+                        <ul class="details">
+                            <li>Project adaptation for PC, tablets and other mobile devices.</li>
+                            <li>Guarantee of your order to correctly display in Google Chrome, Opera, Internet Explorer, Mozilla firefox, Safari browsers.</li>
+                            <li>Cross-browser compatibility for specific platforms on customer's demand.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo"> <img alt="logo :(" src="../img/adaptive.png"> </div>
+        </div>
+    </main> 
+    <footer>
+        <table class="contacts">
+            <caption>
+                <strong>Contacts</strong>
+            </caption>
+            <tr>
+                <td> <strong> E-mail: </strong> </td>
+                <td> joncolab@gmail.com </td>
+            </tr>
+            <tr>
+                <td> <strong> Phone: </strong> </td>
+                <td> +380 (95) 177 23 52 </td>
+            </tr>
+        </table>
+        <div class="lang-menu"> <span><strong>Language ⧩</strong></span>
+            <ul class="languages">
+                <li class="lang active">English</li>
+        <li class="lang"><a href="../scripts/php/start-uk.php">Українська</a></li>
+            </ul>
+        </div>
+    </footer>
+    </body>
+
+</html>

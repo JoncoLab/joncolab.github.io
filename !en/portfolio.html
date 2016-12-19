@@ -1,0 +1,198 @@
+<!doctype html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Jonco Lab</title>
+        <link href="../styles/main-style.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.structure.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.theme.css" rel="stylesheet">
+        
+        <script src="../jquery/external/jquery/jquery.js"></script>
+        <script src="../scripts/js/js.cookie-2.1.3.min.js"></script>
+        <script src="../jquery/jquery-ui.js"></script>
+        <script src="../scripts/js/main-script.js"></script>
+    </head>
+
+<body>
+    <script>
+        var pageId = 2;
+    </script> 
+    <header>
+        <script>
+            $(document).ready(function () {
+                $('header').css({
+                    "opacity": "1"
+                });
+            });
+        </script>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+        <ul class="menu cube">
+            <li class="side"></li>        
+            <li class="menu-item side">
+                <img src="../svg/portfolio.svg">
+                <a href="portfolio.html"></a>
+                <span>Catalog</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/feedback.svg">
+                <a href="feedback.html"></a>
+                <span>Feedback</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/team.svg">
+                <a href="team.html"></a>
+                <span>Our team</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/services.svg">
+                <a href="services.html"></a>
+                <span>Services</span>
+            </li>
+            <li class="side"></li>
+        </ul>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="portfolio">
+            <div class="catalog">
+                <ol class="information">
+                    <li class="thema">
+                        <h3>Single or various thematic Sites</h3>
+                        <div>
+							<p class="thema">Most pages of <strong>single thematic sites</strong> are dedicated to a specific issue or topic. On the other hand, <strong>various thematic sites</strong> cover a wide range of information and may be dedicated to a large number of topics and trends. The demand for such sites is great. They are used by both big companies and single users.</p>
+                        </div>
+                    </li>
+                    <li class="news">
+                        <h3>News sites</h3>
+                        <div>
+                            <p class="news"><strong>News sites</strong> perform a very important task - to convey to the user various news that happened, will happen or are happening at the moment. However, news sites can be dedicated to a specific topic or tell the Internet community news of different scopes of human life.</p>
+                        </div>
+                    </li>
+                    <li class="blog">
+                        <h3>Blogs</h3>
+                        <div>
+							<p class="blog">In the nowadays World Wide Web <strong>blogs</strong> are common phenomenon, while the level of their popularity is growing. Blogs, as well as news sites are designed to convey a particular information to the online community. However, with one significant difference: the author describes his personal opinion on what is happening.</p>
+                        </div>
+                    </li>
+                </ol>
+                <ol class="corporativ">
+                    <li class="corp">
+                        <h3>Corporate sites</h3>
+						<p class="corp"><strong>Corporate Internet resources</strong> are created by organizations or companies to perform one of two specific objectives: strengthening communication between company’s branches or improving reputation in the sight of potential and existing customers.</p>
+                    </li>
+                    <li class="vizitka">
+                        <h3>Business card sites</h3>
+						<p class="vizitka"><strong>Business card</strong> site have unusual structure. They are divided into several sections, that contain information about the company that sells the products, services that are provided and contact information. .</p>
+                    </li>
+                    <li class="portfolios">
+                        <h3>Portfolio sites</h3>
+						<p class="portfolios"><strong>Portfolio websites</strong> are designed to attract the attention of wide target audience by advertising the work performed by an organization or company. The client makes a conclusion based on the concrete result. They are very popular among photo studios, web studios and developers.</p>
+                    </li>
+                </ol>
+                <ol class="commerce">
+                    <li class="vitruna">
+                        <h3>Showcase sites</h3>
+						<p class="vitruna">The main purpose of <strong>showcase site</strong> is not the sale the product, but only its advertising. They contain only detailed information about the product and sometimes the place where you can buy it. Thy are the most popular among companies and enterprises that produce goods.</p>
+                    </li>
+                    <li class="promo">
+                        <h3>Promo sites</h3>
+						<p class="promo"><strong>Promo sites</strong> not only promote certain product or service, but pay special attention to their benefits. They are characterized by a fairly simple structure, contain various graphics and contact information.</p>
+                    </li>
+                    <li class="store">
+                        <h3>Online stores</h3>
+						<p class="store"><strong>Online stores</strong> are designed to sell products of different categories on network online. By visiting this site, every user of the web can choose product they are looking for, find out the details and, if necessary, make orders from home..</p>
+                    </li>
+                </ol>
+                <ol class="social">
+                    <li class="forum">
+                        <h3>Forums</h3>
+						<p class="forum"><strong>Forums</strong> are sites specialized for users to freely discuss different news, issues, life scopes of society ect.</p>
+                    </li>
+                </ol>
+                <ol class="web">
+                    <li class="catalogs">
+                        <h3>Catalogues</h3>
+						<p class="catalogs"><strong>Catalogs</strong> are sites that contain structured links to other Web resources and their brief description.</p>
+                    </li>
+                </ol>
+            </div>
+            <div class="sites">
+                <script>
+                    $(document).ready(function () {
+                        for (var i = 1; i <= 5; i++) {
+                            $('.sites li:nth-child(' + i + ')').css("transform", "none");
+                        }
+                        setTimeout(function () {
+                            $('.portfolio').css({
+                                "overflow": "visible"
+                            }); 
+                        }, 400);
+                    });
+                </script>
+                <h1>Sites catalogue</h1>
+                <ol>
+                    <li class="information"><span>Informational sites</span>
+						<p class="information"><strong>Informational sites</strong> are one of the most popular on the Internet. They are used to give any types of information (corporate or personal, specific or general) to the user.</p>
+                        <div class="arrow"></div>
+                    </li>
+                    <li class="corporativ"><span>Sites of the corporate direction</span>
+						<p class="corporativ"><strong>Corporate sites</strong> are the advanced way to advertise your business or product on the network. They are dedicated to image-making or informational topics.</p>
+                        <div class="arrow"></div>
+                    </li>
+                    <li class="commerce"><span>Commertial sites</span>
+						<p class="commerce"><strong>Commercial resources</strong> is of one of the most common forms of sites. Their main task is to sell goods to online users.</p>
+                        <div class="arrow"></div>
+                    </li>
+                    <li class="social"><span>Social projects</span>
+						<p class="social"><strong>Social projects</strong> enable communication and sharing info on the web.</p>
+                        <div class="arrow"></div>
+                    </li>
+                    <li class="web"><span>Web services</span>
+						<p class="web">Nowadays <strong>web services</strong>  such as catalogs, mail services, search engines, message boards and websites hostings become widely spread.</p>
+                        <div class="arrow"></div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <table class="contacts">
+            <caption>
+                <strong>Contacts</strong>
+            </caption>
+            <tr>
+                <td> <strong> E-mail: </strong> </td>
+                <td> joncolab@gmail.com </td>
+            </tr>
+            <tr>
+                <td> <strong> Phone: </strong> </td>
+                <td> +380 (95) 177 23 52 </td>
+            </tr>
+        </table>
+        <div class="lang-menu"> <span><strong>Language ⧩</strong></span>
+            <ul class="languages">
+                <li class="lang active">English</li>
+        <li class="lang"><a href="../scripts/php/start-uk.php">Українська</a></li>
+            </ul>
+        </div>
+    </footer>
+    </body>
+
+</html>

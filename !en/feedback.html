@@ -1,0 +1,115 @@
+<!doctype html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Jonco Lab</title>
+        <link href="../styles/main-style.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.structure.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.theme.css" rel="stylesheet">
+        
+        <script src="../jquery/external/jquery/jquery.js"></script>
+        <script src="../scripts/js/js.cookie-2.1.3.min.js"></script>
+        <script src="../jquery/jquery-ui.js"></script>
+        <script src="../scripts/js/main-script.js"></script>
+    </head>
+
+<body> 
+    <header>
+        <script>
+            $(document).ready(function () {
+                $('header').css({
+                    "opacity": "1"
+                });
+            });
+        </script>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+        <ul class="menu cube">
+            <li class="side"></li>        
+            <li class="menu-item side">
+                <img src="../svg/portfolio.svg">
+                <a href="portfolio.html"></a>
+                <span>Catalog</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/feedback.svg">
+                <a href="feedback.html"></a>
+                <span>Feedback</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/team.svg">
+                <a href="team.html"></a>
+                <span>Our team</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/services.svg">
+                <a href="services.html"></a>
+                <span>Services</span>
+            </li>
+            <li class="side"></li>
+        </ul>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        var pageId = 1;
+    </script>
+    <main>
+        <div class="callcentr">
+            <script>
+                $(document).ready(function () {
+                    $('.feedback-form').css("transform", "none");
+                });
+            </script>
+            <form action="../scripts/php/mail.php" method="post" class="feedback-form">
+                <h1>Feedback</h1>
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" placeholder="Semen" required autofocus>
+                <label for="email">Your E-mail</label>
+                <input type="email" name="email" id="email" placeholder="example@joncolab.pro" required>
+                <label for="message">Your message</label>
+                <textarea rows="5" placeholder="Type your message" maxlength="1000" id="text" name="message" required></textarea>
+                <fieldset class="buttons">
+                    <input type="submit" id="submit" name="submit" value="Send">
+                    <input type="reset" id="reset" name="reset" value="Reset"> </fieldset>
+        </div>
+    </main> 
+        <footer>
+            <table class="contacts">
+                <caption>
+                    <strong>Contacts</strong>
+                </caption>
+                <tr>
+                    <td> <strong> E-mail: </strong> </td>
+                    <td> joncolab@gmail.com </td>
+                </tr>
+                <tr>
+                    <td> <strong> Phone: </strong> </td>
+                    <td> +380 (95) 177 23 52 </td>
+                </tr>
+            </table>
+            <div class="lang-menu"> <span><strong>Language ⧩</strong></span>
+                <ul class="languages">
+                    <li class="lang active">English</li>
+            <li class="lang"><a href="../scripts/php/start-uk.php">Українська</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+
+</html>

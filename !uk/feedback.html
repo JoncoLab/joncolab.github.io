@@ -1,0 +1,115 @@
+<!doctype html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Jonco Lab</title>
+        <link href="../styles/main-style.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.structure.css" rel="stylesheet">
+        <link href="../jquery/jquery-ui.theme.css" rel="stylesheet">
+        
+        <script src="../jquery/external/jquery/jquery.js"></script>
+        <script src="../scripts/js/js.cookie-2.1.3.min.js"></script>
+        <script src="../jquery/jquery-ui.js"></script>
+        <script src="../scripts/js/main-script.js"></script>
+    </head>
+<body>
+    <script>
+        var pageId = 1;
+    </script> 
+    <header>
+        <script>
+            $(document).ready(function () {
+                $('header').css({
+                    "opacity": "1"
+                });
+            });
+        </script>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+        <ul class="menu cube">
+            <li class="side"></li>        
+            <li class="menu-item side">
+                <img src="../svg/portfolio.svg">
+                <a href="portfolio.html"></a>
+                <span>Каталог</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/feedback.svg">
+                <a href="feedback.html"></a>
+                <span>Зв'язок</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/team.svg">
+                <a href="team.html"></a>
+                <span>Наша команда</span>
+            </li>
+            <li class="menu-item side">
+                <img src="../svg/services.svg">
+                <a href="services.html"></a>
+                <span>Послуги</span>
+            </li>
+            <li class="side"></li>
+        </ul>
+        <div class="arrow">
+            <div class="pyramid">
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="side"></div>
+                <div class="floor"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="callcentr">
+            <script>
+                $(document).ready(function () {
+                    $('.feedback-form').css("transform", "none"); 
+                });
+            </script>
+            <form action="../scripts/php/mail.php" method="post" class="feedback-form">
+                <h1>Зворотній зв'язок</h1>
+                <label for="name">Ваше ім'я</label>
+                <input type="text" name="name" id="name" placeholder="Семен" required autofocus>
+                <label for="email">Ваша електронна адреса</label>
+                <input type="email" name="email" id="email" placeholder="zrazok@joncolab.pro" required>
+                <label for="message">Ваш коментар</label>
+                <textarea rows="5" placeholder="Введіть ваше повідомлення" maxlength="1000" id="text" name="message" required></textarea>
+                <fieldset class="buttons">
+                    <input type="submit" id="submit" name="submit" value="Надіслати">
+                    <input type="reset" id="reset" name="reset" value="Скинути"> </fieldset>
+            </form>
+        </div>
+    </main> 
+    <footer>
+        <table class="contacts">
+            <caption>
+                <strong>Контакти</strong>
+            </caption>
+            <tr>
+                <td> <strong> Ел. пошта: </strong> </td>
+                <td> joncolab@gmail.com </td>
+            </tr>
+            <tr>
+                <td> <strong> Телефон: </strong> </td>
+                <td> +380 (95) 177 23 52 </td>
+            </tr>
+        </table>
+        <div class="lang-menu"> <span><strong>Вибір мови ⧩</strong></span>
+            <ul class="languages">
+                <li class="lang"><a href="../scripts/php/start-en.php">English</a></li>
+                <li class="lang active">Українська</li>
+            </ul>
+        </div>
+    </footer>
+    </body>
+
+</html>
