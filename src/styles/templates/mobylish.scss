@@ -1,186 +1,4 @@
 $line: 10px;
-$time: 0.3s;
-$silverbsh: #f7f7fa;
-$grey: #cccccc;
-$darkgrey: #777777;
-$black: #343434;
-$green: #00804c;
-$lightgreen: #59ab85;
-$blue: #00afe1;
-$lightblue: #00c9f1;
-$silverbg: #eeeeef;
-$silverbr: #d5d7d8;
-$white: #ffffff;
-$silvertxt: #9fa4a7;
-
-@font-face {
-    font-family: Main;
-    src: url('../fonts/aBosaNova.ttf');
-}
-
-@font-face {
-    font-family: Jonco;
-    src: url('../fonts/Spotlight_Typewriter_NC.ttf');
-}
-
-@mixin cube($side: 25px) {
-    position: relative;
-    transform: {
-        style: preserve-3d;
-        origin: center;
-    }
-    width: $side * 10;
-    height: $side * 10;
-    background: {
-        color: transparent;
-    }
-    
-    .side {
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        transform-origin: center;
-        
-        &:nth-of-type(6) { //bottom
-            transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, $side * 5);
-        }
-        &:nth-of-type(5) { //front
-            transform: translate3d(0, 0, $side * 5);
-        }
-        &:nth-of-type(4) { //right
-            transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, $side * 5);
-        }
-        &:nth-of-type(3) { //left
-            transform: rotate3d(0, 1, 0, 270deg) translate3d(0, 0, $side * 5);
-        }
-        &:nth-of-type(2) { //back
-            transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, $side * 5);
-        }
-        &:nth-of-type(1) { //top
-            transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, $side * -5);
-        }
-    }
-}
-
-@mixin sphere ($rad: 25px) {
-    position: relative;
-    transform: {
-        style: preserve-3d;
-        origin: center;
-    }
-    width: $rad * 20;
-    height: $rad * 20;
-    background: {
-        color: transparent;
-    }
-    
-    .circle {
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        transform-origin: center;
-        
-        border-radius: 50%;
-        
-        @for $i from 1 through 29 {
-            &:nth-last-of-type(#{$i}) {
-                transform: rotate3d(0, 1, 0, 6deg * $i);
-                background-color: adjust-hue($blue, 12deg * $i);
-            }
-        }
-    }  
-}
-
-@mixin pyramid($side: 25px) {
-    position: relative;
-    transform: {
-        style: preserve-3d;
-        origin: center;
-    }
-    width: $side * 10;
-    height: $side * 10;
-    background: {
-        color: transparent;
-    }
-    
-    .side {
-        width: 0;
-        height: 0;
-        position: absolute;
-        border: {
-            top: none;
-            bottom: $side * 10 solid $blue;
-            left: $side * 5 solid transparent;
-            right: $side * 5 solid transparent;
-        }
-        
-        transform-origin: bottom;
-        
-        &:nth-of-type(1) {
-            transform: 
-                translate3d(0, 0, $side * 5)
-                rotate3d(1, 0, 0, 30deg);
-            border-bottom-color: $white;
-        }
-        
-        &:nth-of-type(2) {
-            transform:
-                translate3d(0, 0, $side * -5)
-                rotate3d(1, 0, 0, -30deg);
-            border-bottom-color: $white;
-        }
-        
-        &:nth-of-type(3) {
-            transform: 
-                translate3d($side * 5, 0, 0)
-                rotateY(90deg)
-                rotateX(30deg);
-            
-        }
-        
-        &:nth-of-type(4) {
-            transform: 
-                translate3d($side * -5, 0, 0)
-                rotateY(90deg)
-                rotateX(-30deg);
-        }
-        
-    }
-    
-    .floor {
-        width: inherit;
-        height: inherit;
-        transform: 
-            translate3d(0, $side * 5, 0)
-            rotate3d(1, 0, 0, 90deg);
-    }
-}
-
-@keyframes change-color {
-    @for $i from 1 through 10 {
-        from {
-            background-color: $blue;
-        }
-        
-        #{$i * 10%} {
-            background-color: adjust-hue($blue, 36deg * $i);
-        }
-    }
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate3d(0, 1, 0, 360deg);
-    }
-}
-
-@keyframes spin {
-    to {
-        transform: 
-            rotate3d(0, 1, 1, 360deg);
-    }
-}
-
 @media only screen and(min-device-width: 320px) and(max-device-width: 568px) {
     body {
         background: {
@@ -495,6 +313,49 @@ $silvertxt: #9fa4a7;
                     }
                 }
             }
+        }
+    }
+}
+
+@mixin cube($side: 25px) {
+    position: relative;
+    transform: {
+        style: preserve-3d;
+        origin: center;
+    }
+    width: $side * 10;
+    height: $side * 10;
+    background: {
+        color: transparent;
+    }
+    .side {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        transform-origin: center;
+        &:nth-of-type(6) {
+            //bottom
+            transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, $side * 5);
+        }
+        &:nth-of-type(5) {
+            //front
+            transform: translate3d(0, 0, $side * 5);
+        }
+        &:nth-of-type(4) {
+            //right
+            transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, $side * 5);
+        }
+        &:nth-of-type(3) {
+            //left
+            transform: rotate3d(0, 1, 0, 270deg) translate3d(0, 0, $side * 5);
+        }
+        &:nth-of-type(2) {
+            //back
+            transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, $side * 5);
+        }
+        &:nth-of-type(1) {
+            //top
+            transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, $side * -5);
         }
     }
 }
