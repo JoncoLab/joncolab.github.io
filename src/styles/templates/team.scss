@@ -43,7 +43,7 @@ h1 {
                     width: $line * 5;
                     height: $line * 5;
                     background: {
-                        image: url('../../img/social-sprite.png');
+                        image: url('../img/social-sprite.png');
                         size: auto 100%;
                         repeat: no-repeat;
                     }
@@ -73,7 +73,7 @@ h1 {
                         width: $line * 5;
                         height: $line * 5;
                         background: {
-                            image: url('../../img/social-sprite.png');
+                            image: url('../img/social-sprite.png');
                             size: auto 100%;
                             repeat: no-repeat;
                         }
